@@ -14,9 +14,11 @@ app.use(cors())
 app.use(express.json());
 
 // primary routes 
+
 app.use("/movies", moviesRouter);
 app.use("/theaters", theatersRouter);
 app.use("/reviews", reviewsRouter);
+app.use("/", moviesRouter)
 
 // Not found handler - todo: move to errors
 app.use((req, res, next) => {
