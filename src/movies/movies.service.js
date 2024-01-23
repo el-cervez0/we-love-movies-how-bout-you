@@ -1,7 +1,6 @@
 const db = require("../db/connection");
 
 async function list(is_showing) {
-  console.log(is_showing)
   return db("movies")
     .select("movies.*")
     .modify((queryBuilder) => {
